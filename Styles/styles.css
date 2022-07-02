@@ -1,0 +1,286 @@
+/*Estilo general página*/
+
+*{
+    margin: 0;
+    padding: 0
+}
+
+html {
+    background-image: linear-gradient(#ECE9E6, #fff 98%);
+    font-family: 'Roboto Slab', serif;
+}
+
+/*Grid página principal*/
+
+/*Estilos body*/
+
+h1 {
+   text-align: center;
+   margin-bottom: 50px;
+}
+
+
+.contenedorBodyPadre {
+   margin-right: 130px;
+   margin-left: 130px;
+   display:grid;
+   grid-template-columns: 100%;
+   grid-template-rows: 1fr auto 1fr;
+   row-gap: 20px;
+   grid-template-areas: "header" "section" "footer";
+   justify-content: center;
+   align-content: start;
+   justify-items: center;
+}
+
+#headerHijo {
+   margin-top:30px;
+   grid-area: header;
+   display: grid;
+   grid-template-columns: 100%;
+   grid-template-rows: 50% 50%;
+   row-gap: 40px;
+   grid-template-areas: "logoPrincipalHijo" "barraNavHijo";
+   justify-content: center;
+   align-content: center;
+}
+
+#sectionHijo {
+   grid-area: section;
+}
+
+#footerHijo {
+   grid-area: footer;
+   display:grid;
+   grid-template-columns: 100%;
+   grid-template-rows: 0.5fr 3fr;
+   row-gap: 50px;
+   grid-template-areas: "suscripcionFooterHijo" "textoImagenesfooter";
+   justify-content: center;
+}
+
+
+/*Estilos header*/
+
+#logoPrincipalDos{
+   display: none;
+}
+
+#logoPrincipalHijo {
+   grid-area: logoPrincipalHijo;
+   margin-top: 50px;
+   justify-self: center;
+}
+
+/*Estilo navegador*/
+#barraNavHijo {
+   grid-area: barraNavHijo;
+   justify-self: stretch;
+   align-items: center;
+   position: relative;
+}
+
+#listaNav {
+   display: block;
+}
+
+#menuHamburguesa {
+   display: none;
+}
+
+.navegador ul{
+   width: 100%;
+   list-style-type: none;
+   text-align: center;
+   display: flex;  
+   flex-direction: row; 
+   justify-content: space-between;
+   margin-bottom: 30px;
+   margin-top: 30px;
+}
+
+.navegador li{
+   display: inline;
+   text-align: center;
+   margin: 0 10px 0 0;
+   font-size: 20px;
+}
+
+.navegador li a {
+   padding: 2px 7px 2px 7px;
+   color: #666;
+   text-decoration: none;
+   transition: all 0.5s;
+}
+
+.navegador li a:hover{
+   background-color: #666;
+   color: #ECE9E6;
+   border-radius: 2px;
+}
+
+
+/*Estilos section*/
+
+/*Estilo barra redes*/
+.barraRedes {
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   position: fixed;
+   justify-content: center;
+   z-index: 2;
+}
+
+.barraRedes i{
+    color: #666;
+    font-size: 24px;
+    transition: all 0.5s;
+}
+
+.barraRedes i:hover{
+   color: #ECE9E6;
+   background-color: #666;
+   border-bottom-right-radius: 3px;
+   border-top-right-radius: 3px;
+   border-bottom-left-radius: 0px;
+   border-top-left-radius: 0px;
+}
+
+/*Estilos contenido principal*/
+#carrouselHijo {
+   grid-area: carrouselHijo;
+   justify-self: center;
+}
+
+#textoSectionHijo {
+   grid-area:textoSectionHijo;
+}
+
+#mainPadre {
+   margin-bottom: 20px;
+   display: grid;
+   grid-template-columns: 100%;
+   grid-template-rows: 1fr 3fr;
+   row-gap: 20px;
+   grid-template-areas: "carrouselHijo" "textoSectionHijo";
+   justify-content: center;
+}
+
+/*Estilo imagenes y texto libros*/
+.libros-container{
+   display: flex;
+   flex-direction: row;
+}
+
+.imagen-derecha{
+   flex-direction: row-reverse;
+}
+
+ .img-libros {
+   width: 200px;
+   height: 300px;
+   margin: 20px;
+ }
+
+ .texto-libros {
+   margin-top: 20px;
+ }
+
+
+/*Estilos footer*/
+
+#suscripcionFooterHijo {
+   grid-area: suscripcionFooterHijo;
+   justify-self: center;
+   align-self: center;
+}
+
+#textoImagenesfooter {
+   grid-area: textoImagenesfooter;
+}
+
+#imagenEditorialFooter{
+   grid-area: imagenEditorialFooter;
+   height: 100px;
+}
+
+#textoFooter {
+   grid-area: textoFooter;
+   text-align: center;
+}
+
+#logoFooter{
+   grid-area: logoFooter;
+   height: 100px;
+   justify-self: center;
+}
+
+#fiscalFooter{
+   grid-area: fiscalFooter;
+   height: 100px;
+   justify-self: center;
+}
+
+.footerPadre {
+   display:grid;
+   grid-template-columns: 1fr auto 1fr;
+   grid-template-rows: 0.3fr 0.3fr;
+   row-gap: 10px;
+   grid-template-areas: ". imagenEditorialFooter ." "logoFooter textoFooter fiscalFooter";
+   justify-items: center;
+   align-items: center;
+}
+
+ #textoNovedades{
+   display: flex;
+   flex-direction: row;
+ }
+ 
+
+
+
+
+ @media only screen and (max-device-width : 480px) {
+   #listaNav{
+      align-items: center;
+      justify-items: center;
+   }
+
+   #logoPrincipal {
+      width: 300px;
+      height: auto;
+   }
+
+   .libros-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .texto-libros{
+      margin-bottom:35px;
+   }
+
+   .img-libros {
+      width: 100px;
+      height: 150px;
+      margin: 0;
+    }
+
+   .footerPadre {
+      display:grid;
+      grid-template-columns: 1fr auto 1fr;
+      grid-template-rows: 50% 50%;
+      row-gap: 10px;
+      column-gap: 10px;
+      grid-template-areas: ". imagenEditorialFooter ." "logoFooter textoFooter fiscalFooter";
+      justify-items: center;
+      align-items: center;
+   }
+
+   #textoImagenesfooter {
+      justify-items: center;
+   }
+
+ }
