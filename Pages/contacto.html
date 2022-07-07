@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../Styles/styles.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </head>
 
 <!-- Cuerpo de la página -->
@@ -43,29 +45,46 @@
         </div>-->
 
         <!-- Contenido principal -->
-        <main>
+        
+        <main class="container w-100">
             <h1>¡Envíanos tu consulta!</h1>
-            <section>
+            <section class="w-100">
                 <form name="formulario" action="../index.html" method="post">
                     <fieldset>
-                    <legend>Formulario de contacto</legend>
-                        <p><label for="nombre">*Nombre: <input type="text" name="nombre" id="nombre"></label></p>
-                        <p><label for="numero">*Número: <input type="number" name="numero" id="numero"></label></p>
-                        <p><label for="email">*Correo electrónico: <input type="email" name="correoElectrónico" id="email" placeholder="ejemplo@gmail.com"></label></p>
-                        <textarea name="mensaje" id="areaDeMensaje" cols="30" rows="10" placeholder="Escriba aquí su mensaje."></textarea>
-                        <p><input type="checkbox">*He leído y acepto la <a href="#">política de privacidad</a>.</p>
-                        <p><input type="checkbox">Quiero suscribirme y recibir novedades.</p>
-                        <p>* Campo obligatorio.</p>
-                        <input type="submit" value="Enviar">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Nombre y Apellido</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Número de teléfono</label>
+                            <input type="tel" class="form-control" id="exampleFormControlInput1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Dejanos tu mensaje</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Quisiera publicar mi libro..."></textarea>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              He leído y acepto los <a href="#">términos y condiciones</a>.
+                            </label>
+                         </div>
+                         <div id="botonEnviar">
+                            <button type="submit" class="btn btn-primary colorBoton">Enviar</button>
+                        </div>
                     </fieldset>
                 </form>
             </section>
         </main>
-        <hr>
     </section>
     
     <!-- Pie de página con  Suscripción, QR fiscal y Logo -->
     <footer id="footerHijo">
+        <hr>
         <div id="textoImagenesfooter" class="footerPadre">
             <img id="imagenEditorialFooter" src="../Multimedia/Logo cabecera.png" alt="Editorial Fitz Roy">
             <img id="logoFooter" src="../Multimedia/favicon.png" alt="Imagen editorial Fitz Roy">
